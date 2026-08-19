@@ -13,6 +13,7 @@
   },
   "// dependencies": "Versions are pinned to Expo SDK 54 so every package is mutually compatible. '~' means 'patch updates allowed'. React Native's version is chosen by the SDK, not by us.",
   "dependencies": {
+    "babel-preset-expo": "~54.0.10",
     "expo": "^54.0.0",
     "expo-asset": "~12.0.13",
     "expo-status-bar": "~3.0.9",
