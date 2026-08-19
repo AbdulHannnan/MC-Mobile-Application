@@ -2,10 +2,8 @@
   "name": "microcare",
   "version": "1.0.0",
   "private": true,
-
   "// main": "Entry point. Unlike a web React app (index.html + ReactDOM.render), a native app boots through Expo's AppEntry, which calls registerRootComponent(App) for us. It auto-loads ./App.tsx from the project root.",
   "main": "node_modules/expo/AppEntry.js",
-
   "scripts": {
     "// start": "Starts the Metro bundler + Expo dev server. You then open the app in Expo Go (scan the QR) or an emulator.",
     "start": "expo start",
@@ -13,15 +11,14 @@
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
-
   "// dependencies": "Versions are pinned to Expo SDK 52 so every package is mutually compatible. '~' means 'patch updates allowed'. React Native's version is chosen by the SDK, not by us.",
   "dependencies": {
     "expo": "~52.0.0",
+    "expo-asset": "~11.0.5",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
-    "react-native": "0.76.3"
+    "react-native": "0.76.9"
   },
-
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
