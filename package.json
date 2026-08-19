@@ -11,17 +11,17 @@
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
-  "// dependencies": "Versions are pinned to Expo SDK 52 so every package is mutually compatible. '~' means 'patch updates allowed'. React Native's version is chosen by the SDK, not by us.",
+  "// dependencies": "Versions are pinned to Expo SDK 54 so every package is mutually compatible. '~' means 'patch updates allowed'. React Native's version is chosen by the SDK, not by us.",
   "dependencies": {
-    "expo": "~52.0.0",
-    "expo-asset": "~11.0.5",
-    "expo-status-bar": "~2.0.0",
-    "react": "18.3.1",
-    "react-native": "0.76.9"
+    "expo": "^54.0.0",
+    "expo-asset": "~12.0.13",
+    "expo-status-bar": "~3.0.9",
+    "react": "19.1.0",
+    "react-native": "0.81.5"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@types/react": "~18.3.12",
+    "@types/react": "~19.1.0",
     "typescript": "^5.3.3"
   }
 }
