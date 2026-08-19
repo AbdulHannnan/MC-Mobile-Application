@@ -1,0 +1,11 @@
+{
+  // We extend Expo's base TS config. It already knows about React Native types,
+  // JSX, and the module resolution native bundlers use — so we only add overrides.
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    // Strict mode on from day one — you're a senior TS dev, so let's not regret it later.
+    "strict": true
+  },
+  // Type-check every TS/TSX file in the project.
+  "include": ["**/*.ts", "**/*.tsx"]
+}

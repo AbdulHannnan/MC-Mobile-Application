@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native build artifacts (only appear if you ever "prebuild"/eject)
+/ios
+/android
+
+# Metro bundler cache
+.metro-health-check*
+
+# Environment secrets (added properly in Module 3)
+.env
+.env.local
+*.local
+
+# Logs / OS junk
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+.DS_Store
