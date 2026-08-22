@@ -20,7 +20,7 @@ We build **exactly one module per turn, in order**. After each module I summariz
 
 ### Phase 1 — Foundation
 - [x] 1. Initialize Expo + TypeScript project and run it once on a device/emulator
-- [ ] 2. Folder structure & architecture conventions
+- [x] 2. Folder structure & architecture conventions
 - [ ] 3. App config & environment variables (app.json, .env, app.config.ts)
 - [ ] 4. Navigation setup with Expo Router
 - [ ] 5. Design system: theme tokens (colors, spacing, typography, radii)

@@ -4,7 +4,16 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     // Strict mode on from day one — you're a senior TS dev, so let's not regret it later.
-    "strict": true
+    "strict": true,
+
+    // Path aliases (Module 2). `baseUrl` sets the root for non-relative imports,
+    // and `paths` maps the `@/*` prefix to `src/*`. This is the TypeScript side
+    // of the alias — it powers editor autocomplete and type-checking. The
+    // matching runtime resolution lives in babel.config.js; keep both in sync.
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   // Type-check every TS/TSX file in the project.
   "include": ["**/*.ts", "**/*.tsx"]
