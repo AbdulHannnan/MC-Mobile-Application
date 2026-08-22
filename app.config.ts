@@ -54,6 +54,22 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     name: config.name ?? 'Microcare',
     slug: config.slug ?? 'microcare',
 
+    // URL scheme for deep linking (Module 4). Expo Router uses this so links
+    // like `microcare://about` can open a specific screen from outside the app.
+    scheme: 'microcare',
+
+    // Register the Expo Router plugin alongside whatever app.json declared
+    // (e.g. expo-asset). We de-dupe so re-runs don't add it twice.
+    plugins: Array.from(new Set([...(config.plugins ?? []), 'expo-router'])),
+
+    // Typed routes: Expo generates a type for every route file, so `<Link href>`
+    // and `router.push()` are checked against real routes — a typo is a compile
+    // error, not a runtime dead link.
+    experiments: {
+      ...config.experiments,
+      typedRoutes: true,
+    },
+
     // `extra` is the bridge from build-time config to runtime code.
     extra: {
       ...config.extra,

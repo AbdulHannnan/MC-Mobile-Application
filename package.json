@@ -2,8 +2,8 @@
   "name": "microcare",
   "version": "1.0.0",
   "private": true,
-  "// main": "Entry point. Unlike a web React app (index.html + ReactDOM.render), a native app boots through Expo's AppEntry, which calls registerRootComponent(App) for us. It auto-loads ./App.tsx from the project root.",
-  "main": "node_modules/expo/AppEntry.js",
+  "// main": "Entry point. With Expo Router (Module 4) the app boots through 'expo-router/entry' instead of App.tsx. This entry scans the src/app directory and builds the navigation tree from the files there.",
+  "main": "expo-router/entry",
   "scripts": {
     "// start": "Starts the Metro bundler + Expo dev server. You then open the app in Expo Go (scan the QR) or an emulator.",
     "start": "expo start",
@@ -17,9 +17,13 @@
     "expo": "^54.0.0",
     "expo-asset": "~12.0.13",
     "expo-constants": "~18.0.14",
+    "expo-linking": "~8.0.12",
+    "expo-router": "~6.0.24",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
