@@ -15,12 +15,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { COLORS, SPACING, TYPOGRAPHY } from '@/constants';
+// Reading config through the typed accessor proves the full chain works:
+// .env  →  app.config.ts (extra)  →  expo-constants  →  src/lib/config.ts.
+import { config } from '@/lib';
 
 export default function RootScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Microcare</Text>
-      <Text style={styles.subtitle}>Module 2: architecture is in place ✅</Text>
+      <Text style={styles.subtitle}>Module 3: config & env wired ✅</Text>
+
+      {/* Live proof the env pipeline works — shows values that came from .env. */}
+      <Text style={styles.meta}>env: {config.appEnv}</Text>
+      <Text style={styles.meta}>api: {config.apiBaseUrl}</Text>
 
       <StatusBar style="auto" />
     </View>
@@ -48,5 +55,10 @@ const styles = StyleSheet.create({
     fontSize: TYPOGRAPHY.body,
     color: COLORS.muted,
     textAlign: 'center',
+  },
+  meta: {
+    marginTop: SPACING.xs,
+    fontSize: TYPOGRAPHY.caption,
+    color: COLORS.primary,
   },
 });
